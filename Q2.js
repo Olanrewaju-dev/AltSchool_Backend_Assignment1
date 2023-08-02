@@ -12,10 +12,10 @@ fs.mkdir("./Student", (err) => {
 })
 
 
-//2.2 - In the Students directory, create a file named user.js
+// 2.2 - In the Students directory, create a file named user.js
 const newFile = path.join(__dirname, "Student", "user.js")
 
-fs.writeFile(newFile, "\nUsers details:", (err) => {
+fs.writeFile(newFile, "\nUsers details", (err) => {
     if(err) {
         console.log(err)
         return
@@ -24,7 +24,7 @@ fs.writeFile(newFile, "\nUsers details:", (err) => {
 })
 
 
-//2.3 - Update the Students directory to “Names”
+// 2.3 - Update the Students directory to “Names”
 const currentFolderName = "./Student"
 const newFolderName = "./Names"
 
@@ -49,7 +49,7 @@ fs.appendFile(filePath, "\nBalogun Olanrewaju", (err) => {
 })
 
 // 2.5 - Update the file and add your age, sex, nationality, phone number 
-//     and any other information about yourself
+//      and any other information about yourself
 
 const additionalData = "\nI am 29 years old. \nI'm a Nigerian male and my goal is to become fullstack JS dev. \nMy phone number is 090311XXXXX."
 
@@ -95,6 +95,7 @@ fs.rm(newFilePathName, (err) => {
 })
 
 // 2.9 Delete the directory “Names”
+// Please note that the newFolderName is declared on line 29
 fs.rmdir(newFolderName, (err)=>{
     if(err) {
         console.log(err)
